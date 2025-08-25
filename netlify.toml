@@ -1,0 +1,15 @@
+# Pengaturan Global untuk Build
+[build]
+  # Perintah untuk build frontend Anda
+  command = "npm install"
+  # Direktori tempat Netlify Functions berada
+  functions = "functions"
+  # Direktori output setelah build frontend
+  publish = "dist"
+
+# Aturan Redirect untuk API (SANGAT PENTING)
+[[redirects]]
+  # Arahkan semua request dari /api/* ke Netlify Function
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
