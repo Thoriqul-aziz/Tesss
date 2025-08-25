@@ -1,7 +1,7 @@
 # Pengaturan Global untuk Build
 [build]
   # Perintah untuk build frontend Anda
-  command = "npm install"
+  command = "npm install --legacy-peer-deps"
   # Direktori tempat Netlify Functions berada
   functions = "functions"
   # Direktori output setelah build frontend
