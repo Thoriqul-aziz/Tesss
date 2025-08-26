@@ -25,8 +25,8 @@ app.use(
 
 const router = express.Router();
 
-router.get("/persons", (request, response) => {
-  Person.find({}).then((person) => {
+router.get("/persons", async (request, response) => {
+  await Person.find({}).then((person) => {
     response.json(person);
   });
 });
